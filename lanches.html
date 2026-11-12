@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lanches</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+
+body{
+  background:#fff7f0;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(45deg,#ff3c00,#ff7a00);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+nav a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:black;
+}
+
+/* CONTAINER */
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+}
+
+/* CARD */
+.card{
+  width:260px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+  position:relative;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+/* IMAGEM + NOME SOBREPOSTO */
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.nome-img{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  padding:5px 10px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+/* TEXTO */
+.card h3{
+  color:#ff3c00;
+  padding:10px;
+}
+
+.card p{
+  padding:0 10px;
+}
+
+.card span{
+  display:block;
+  padding:10px;
+  font-weight:bold;
+}
+
+/* BOTÃO */
+button{
+  margin:10px;
+  padding:10px;
+  background:#25d366;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#1ebe5d;
+}
+
+/* CARRINHO */
+.carrinho{
+  position:fixed;
+  right:10px;
+  top:100px;
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  width:220px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍔 Sabor Gelado 🍦</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="lanches.html">Lanches</a>
+    <a href="sobremesas.html">Sobremesas</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="Avaliaçao.html">Formulário</a>
+  </nav>
+</header>
+
+<section class="container">
+
+<!-- LANCHE 1 -->
+<div class="card">
+  <img src="burguer2.jpg">
+  <div class="nome-img">X-Burger</div>
+  <h3>X-Burger</h3>
+  <p>Carne, queijo e molho especial</p>
+  <span>R$ 15</span>
+  <button onclick="add('X-Burger',15)">Adicionar</button>
+</div>
+
+<!-- LANCHE 2 -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+  <div class="nome-img">X-Bacon</div>
+  <h3>X-Bacon</h3>
+  <p>Bacon crocante e cheddar</p>
+  <span>R$ 20</span>
+  <button onclick="add('X-Bacon',20)">Adicionar</button>
+</div>
+
+<!-- LANCHE 3 -->
+<div class="card">
+  <img src="xtudo.jpg">
+  <div class="nome-img">X-Tudo</div>
+  <h3>X-Tudo</h3>
+  <p>Completo com tudo 😋</p>
+  <span>R$ 25</span>
+  <button onclick="add('X-Tudo',25)">Adicionar</button>
+</div>
+
+<!-- LANCHE 4 -->
+<div class="card">
+  <img src="dogdog.jpg">
+  <div class="nome-img">Hot Dog</div>
+  <h3>Hot Dog</h3>
+  <p>Completo</p>
+  <span>R$ 12</span>
+  <button onclick="add('Hot Dog',12)">Adicionar</button>
+</div>
+
+<!-- LANCHE 5 -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086">
+  <div class="nome-img">X-Frango</div>
+  <h3>X-Frango</h3>
+  <p>Frango grelhado e queijo</p>
+  <span>R$ 18</span>
+  <button onclick="add('X-Frango',18)">Adicionar</button>
+</div>
+
+<!-- LANCHE 6 -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b">
+  <div class="nome-img">X-Calabresa</div>
+  <h3>X-Calabresa</h3>
+  <p>Calabresa acebolada</p>
+  <span>R$ 17</span>
+  <button onclick="add('X-Calabresa',17)">Adicionar</button>
+</div>
+
+<!-- LANCHE 7 -->
+<div class="card">
+  <img src="duplo.jpg">
+  <div class="nome-img">Duplo Burger</div>
+  <h3>Duplo Burger</h3>
+  <p>2 carnes + bacon</p>
+  <span>R$ 28</span>
+  <button onclick="add('Duplo Burger',28)">Adicionar</button>
+</div>
+
+<!-- LANCHE 8 -->
+<div class="card">
+  <img src="batata.jpg">
+  <div class="nome-img">Batata Cheddar</div>
+  <h3>Batata Cheddar</h3>
+  <p>Fritas com cheddar e bacon</p>
+  <span>R$ 15</span>
+  <button onclick="add('Batata Cheddar',15)">Adicionar</button>
+</div>
+
+</section>
+
+<!-- CARRINHO -->
+<div class="carrinho">
+  <h3>🛒 Carrinho</h3>
+  <ul id="lista"></ul>
+  <p>Total: R$ <span id="total">0</span></p>
+  <button onclick="finalizar()">Finalizar</button>
+</div>
+
+<footer>
+  <p>🍔 Sua Hamburgueria</p>
+</footer>
+
+<script>
+let total = 0;
+let itens = [];
+
+function add(nome, preco){
+  itens.push(nome);
+  total += preco;
+
+  let li = document.createElement("li");
+  li.textContent = nome + " - R$ " + preco;
+  document.getElementById("lista").appendChild(li);
+
+  document.getElementById("total").textContent = total;
+}
+
+function finalizar(){
+  let numero="5561999999999";
+  let msg="Pedido:%0A" + itens.join("%0A") + "%0ATotal: R$ " + total;
+  window.open(`https://wa.me/${numero}?text=${msg}`);
+}
+</script>
+<button class="btn-voltar" onclick="history.back()">
+    ← Voltar
+</button>
+
+<style>
+.btn-voltar{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-voltar:hover{
+    background-color: #0056b3;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+</head>
+<body>
+
+
+
+    <!-- Botão para ir para outra página -->
+    <button onclick="window.location.href='Sobremesas.html'">
+        Ir para Próxima Página →
+    </button>
+
+</body>
+</html>
+<!-- BONEQUINHO FLUTUANTE -->
+<div id="hamburguer-flutuante">
+    <div class="cabeca">
+        <div class="olho olho1"></div>
+        <div class="olho olho2"></div>
+        <div class="sorriso"></div>
+    </div>
+
+    <div class="alface"></div>
+    <div class="queijo"></div>
+    <div class="carne"></div>
+    <div class="base"></div>
+</div>
+
+<div id="fala">🍔 Experimente nossos lanches!</div>
+
+<style>
+#hamburguer-flutuante{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:120px;
+    z-index:9999;
+    cursor:pointer;
+    animation:flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+.cabeca{
+    width:120px;
+    height:50px;
+    background:#d89c52;
+    border-radius:60px 60px 15px 15px;
+    position:relative;
+}
+
+.olho{
+    width:6px;
+    height:6px;
+    background:#000;
+    border-radius:50%;
+    position:absolute;
+    top:25px;
+}
+
+.olho1{left:35px;}
+.olho2{right:35px;}
+
+.sorriso{
+    width:20px;
+    height:10px;
+    border-bottom:2px solid #000;
+    border-radius:0 0 20px 20px;
+    position:absolute;
+    left:50px;
+    top:30px;
+}
+
+.alface{
+    height:8px;
+    background:#2fbf4a;
+}
+
+.queijo{
+    height:6px;
+    background:#ffd700;
+}
+
+.carne{
+    height:18px;
+    background:#5c3317;
+}
+
+.base{
+    height:25px;
+    background:#c9873e;
+    border-radius:0 0 15px 15px;
+}
+
+#fala{
+    position:fixed;
+    right:160px;
+    bottom:70px;
+    background:white;
+    padding:10px 15px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    display:none;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+}
+</style>
+
+<script>
+const hamburguer = document.getElementById("hamburguer-flutuante");
+const fala = document.getElementById("fala");
+
+hamburguer.addEventListener("click", () => {
+    fala.style.display = "block";
+
+    setTimeout(() => {
+        fala.style.display = "none";
+    }, 3000);
+});
+</script>
+
+</body>
+</html>

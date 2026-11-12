@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobremesas</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial;
+}
+
+body{
+  background:#fff0f5;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(45deg,#ff1493,#ff69b4);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+nav a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:black;
+}
+
+/* CONTAINER */
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+}
+
+/* CARD */
+.card{
+  width:260px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+  position:relative;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+/* IMAGEM */
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+/* NOME SOBRE IMAGEM */
+.nome-img{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  padding:5px 10px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+/* TEXTO */
+.card h3{
+  color:#ff1493;
+  padding:10px;
+}
+
+.card p{
+  padding:0 10px;
+}
+
+.card span{
+  display:block;
+  padding:10px;
+  font-weight:bold;
+}
+
+/* BOTÃO */
+button{
+  margin:10px;
+  padding:10px;
+  background:#ff1493;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#e60073;
+}
+
+/* CARRINHO */
+.carrinho{
+  position:fixed;
+  right:10px;
+  top:100px;
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  width:220px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>🍔 Sabor Gelado 🍦</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="lanches.html">Lanches</a>
+    <a href="sobremesas.html">Sobremesas</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="Avaliaçao.html">Formulário</a>
+  </nav>
+</header>
+
+<section class="container">
+
+<!-- SOBREMESA 1 -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+  <div class="nome-img">Bolo de Chocolate</div>
+  <h3>Bolo de Chocolate</h3>
+  <p>Fatia recheada com cobertura cremosa</p>
+  <span>R$ 14</span>
+  <button onclick="add('Bolo de Chocolate',14)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 2 -->
+<div class="card">
+  <img src="sundae.jpg">
+  <div class="nome-img">Sorvete</div>
+  <h3>Sundae</h3>
+  <p>Chocolate, morango e chantilly</p>
+  <span>R$ 16</span>
+  <button onclick="add('Taça de Sorvete',16)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 3 -->
+<div class="card">
+  <img src="milk.jpg">
+  <div class="nome-img">Milk Shake</div>
+  <h3>Milk Shake</h3>
+  <p>Ovomaltine com chantilly</p>
+  <span>R$ 18</span>
+  <button onclick="add('Milk Shake',18)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 4 -->
+<div class="card">
+  <img src="donuts.jpg">
+  <div class="nome-img">Donuts</div>
+  <h3>Donuts</h3>
+  <p>Cobertura colorida e chocolate</p>
+  <span>R$ 10</span>
+  <button onclick="add('Donuts',10)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 5 -->
+<div class="card">
+  <img src="brownie.jpg">
+  <div class="nome-img">Brownie</div>
+  <h3>Brownie</h3>
+  <p>Brownie delicioso</p>
+  <span>R$ 20</span>
+  <button onclick="add('Brownie',20)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 6 -->
+<div class="card">
+  <img src="cupkake.jpg">
+  <div class="nome-img">Cupcake</div>
+  <h3>Cupcake</h3>
+  <p>Chocolate com morango</p>
+  <span>R$ 12</span>
+  <button onclick="add('Cupcake',12)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 7 -->
+<div class="card">
+  <img src="petigatou.jpg">
+  <div class="nome-img">Petit Gateau</div>
+  <h3>Petit Gateau</h3>
+  <p>Bolo quente com sorvete</p>
+  <span>R$ 22</span>
+  <button onclick="add('Petit Gateau',22)">
+    Adicionar
+  </button>
+</div>
+
+<!-- SOBREMESA 8 -->
+<div class="card">
+  <img src="chesecake.jpg">
+  <div class="nome-img">Cheesecake</div>
+  <h3>Cheesecake</h3>
+  <p>Calda de frutas vermelhas</p>
+  <span>R$ 19</span>
+  <button onclick="add('Cheesecake',19)">
+    Adicionar
+  </button>
+</div>
+
+</section>
+
+<!-- CARRINHO -->
+<div class="carrinho">
+  <h3>🛒 Carrinho</h3>
+
+  <ul id="lista"></ul>
+
+  <p>
+    Total: R$
+    <span id="total">0</span>
+  </p>
+
+  <button onclick="finalizar()">
+    Finalizar
+  </button>
+</div>
+
+<footer>
+  <p>🍰 Sua Doceria</p>
+</footer>
+
+<script>
+let total = 0;
+let itens = [];
+
+function add(nome, preco){
+
+  itens.push(nome);
+
+  total += preco;
+
+  let li = document.createElement("li");
+
+  li.textContent = nome + " - R$ " + preco;
+
+  document.getElementById("lista")
+    .appendChild(li);
+
+  document.getElementById("total")
+    .textContent = total;
+}
+
+function finalizar(){
+
+  let numero = "5561999999999";
+
+  let msg =
+    "Pedido:%0A" +
+    itens.join("%0A") +
+    "%0ATotal: R$ " + total;
+
+  window.open(
+    `https://wa.me/${numero}?text=${msg}`
+  );
+}
+</script>
+<button class="btn-voltar" onclick="history.back()">
+    ← Voltar
+</button>
+
+<style>
+.btn-voltar{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-voltar:hover{
+    background-color: #0056b3;
+}
+</style>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+</head>
+<body>
+
+    
+
+    <!-- Botão para ir para outra página -->
+    <button onclick="window.location.href='drinks.html'">
+        Ir para Próxima Página →
+    </button>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boneco de Sorvete</title>
+
+<style>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#87CEEB;
+}
+
+.sorvete{
+    position:relative;
+    cursor:pointer;
+    animation:balancar 2s infinite ease-in-out;
+}
+
+.bola{
+    width:120px;
+    height:120px;
+    background:pink;
+    border-radius:50%;
+    position:relative;
+    z-index:2;
+}
+
+.olho{
+    width:12px;
+    height:12px;
+    background:black;
+    border-radius:50%;
+    position:absolute;
+    top:40px;
+}
+
+.olho.esquerdo{ left:35px; }
+.olho.direito{ right:35px; }
+
+.sorriso{
+    width:30px;
+    height:15px;
+    border-bottom:4px solid black;
+    border-radius:0 0 20px 20px;
+    position:absolute;
+    top:65px;
+    left:45px;
+}
+
+.casquinha{
+    width:0;
+    height:0;
+    border-left:50px solid transparent;
+    border-right:50px solid transparent;
+    border-top:120px solid #D2691E;
+    margin:auto;
+    margin-top:-10px;
+}
+
+.braco{
+    width:50px;
+    height:6px;
+    background:black;
+    position:absolute;
+    top:130px;
+}
+
+.braco.esquerdo{
+    left:-40px;
+    transform:rotate(20deg);
+}
+
+.braco.direito{
+    right:-40px;
+    transform:rotate(-20deg);
+}
+
+@keyframes balancar{
+    0%{ transform:rotate(-5deg); }
+    50%{ transform:rotate(5deg); }
+    100%{ transform:rotate(-5deg); }
+}
+</style>
+</head>
+<body>
+
+<div class="sorvete" id="sorvete">
+    <div class="bola">
+        <div class="olho esquerdo"></div>
+        <div class="olho direito"></div>
+        <div class="sorriso"></div>
+    </div>
+
+    <div class="braco esquerdo"></div>
+    <div class="braco direito"></div>
+
+    <div class="casquinha"></div>
+</div>
+
+<script>
+const sorvete = document.getElementById("sorvete");
+
+sorvete.addEventListener("click", () => {
+    const cores = [
+        "#ff69b4",
+        "#87cefa",
+        "#98fb98",
+        "#ffd700",
+        "#ff6347",
+        "#dda0dd"
+    ];
+
+    const corAleatoria =
+        cores[Math.floor(Math.random() * cores.length)];
+
+    document.querySelector(".bola").style.background = corAleatoria;
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>

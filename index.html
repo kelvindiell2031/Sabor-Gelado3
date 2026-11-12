@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor Gelado</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff7f0;
+    }
+
+    /* HEADER */
+    header{
+      background:linear-gradient(45deg,#ff3c00,#ff7a00);
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    /* MENU */
+    nav{
+      margin-top:10px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#000;
+    }
+
+    /* HERO */
+    .hero{
+      height:80vh;
+      background:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd') center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-shadow:2px 2px 5px black;
+      text-align:center;
+      flex-direction:column;
+    }
+
+    .hero h2{
+      font-size:50px;
+    }
+
+    .hero button{
+      margin-top:20px;
+      padding:15px 30px;
+      border:none;
+      background:#25d366;
+      color:white;
+      font-size:16px;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      transform:scale(1.1);
+    }
+
+    /* CARDS */
+    .container{
+      padding:40px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      width:250px;
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .card:hover{
+      transform:scale(1.05);
+    }
+
+    .card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      color:#ff3c00;
+      padding:10px;
+    }
+
+    .card p{
+      padding:0 10px 10px;
+    }
+
+    /* BOTÃO WHATSAPP */
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      text-decoration:none;
+      font-size:20px;
+      box-shadow:0 0 10px rgba(0,0,0,0.3);
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍔 Sabor Gelado 🍦</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="lanches.html">Lanches</a>
+    <a href="sobremesas.html">Sobremesas</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="Avaliaçao.html">Formulário</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>O melhor da cidade 😋</h2>
+  <button onclick="irPara('lanches.html')">Ver Cardápio</button>
+</section>
+
+<!-- DESTAQUES -->
+<section class="container">
+
+  <div class="card" onclick="irPara('lanches.html')">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+    <h3>Burgers</h3>
+    <p>Os melhores hambúrgueres 🍔</p>
+  </div>
+
+  <div class="card" onclick="irPara('sobremesas.html')">
+    <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371">
+    <h3>Sorvetes</h3>
+    <p>Sobremesas incríveis 🍦</p>
+  </div>
+
+  <div class="card" onclick="irPara('drinks.html')">
+    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307">
+    <h3>Drinks</h3>
+    <p>Bebidas geladas 🍹</p>
+  </div>
+
+</section>
+
+<!-- BOTÃO WHATSAPP -->
+<a class="whatsapp" href="#" onclick="pedido()">📲</a>
+
+<footer>
+  <p>📍 Dourados Ms| Rua café com Leite 67 📞 (67) 99999-9999</p>
+</footer>
+
+<script>
+function irPara(pagina){
+  window.location.href = pagina;
+}
+
+function pedido(){
+  let numero="5561999999999";
+  let msg="Olá! Quero fazer um pedido 😋";
+  window.open(`https://wa.me/${numero}?text=${msg}`);
+}
+</script>
+
+
+
+</body>
+</html>

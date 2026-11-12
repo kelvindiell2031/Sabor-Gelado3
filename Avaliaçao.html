@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avaliação - Sabor Gelado</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    background:#fff;
+    width:100%;
+    max-width:750px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#0083b0;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#333;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#00b4db;
+    box-shadow:0 0 8px rgba(0,180,219,0.3);
+}
+
+.radio-group{
+    display:flex;
+    gap:20px;
+}
+
+.radio-group label{
+    font-weight:normal;
+}
+
+textarea{
+    resize:none;
+}
+
+.botoes{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.btn{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-enviar{
+    background:#00b4db;
+    color:white;
+}
+
+.btn-enviar:hover{
+    background:#0083b0;
+    transform:translateY(-2px);
+}
+
+.btn-voltar{
+    background:#e0e0e0;
+    color:#333;
+}
+
+.btn-voltar:hover{
+    background:#cfcfcf;
+    transform:translateY(-2px);
+}
+
+.rodape{
+    text-align:center;
+    margin-top:20px;
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+    .botoes{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🍔 Sabor Gelado 🍦</h1>
+    <p class="subtitulo">Sua opinião nos ajuda a melhorar!</p>
+
+    <form>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="text" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <div class="form-group">
+            <label>Qualidade dos produtos</label>
+            <select>
+                <option>Excelente</option>
+                <option>Boa</option>
+                <option>Regular</option>
+                <option>Ruim</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Atendimento</label>
+            <select>
+                <option>Excelente</option>
+                <option>Boa</option>
+                <option>Regular</option>
+                <option>Ruim</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Você recomendaria a Sabor Gelado?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="recomenda"> Sim</label>
+                <label><input type="radio" name="recomenda"> Não</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Comentário ou sugestão</label>
+            <textarea rows="5" placeholder="Escreva sua opinião..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Nota Geral</label>
+            <select>
+                <option>⭐⭐⭐⭐⭐ Excelente</option>
+                <option>⭐⭐⭐⭐ Muito Boa</option>
+                <option>⭐⭐⭐ Boa</option>
+                <option>⭐⭐ Regular</option>
+                <option>⭐ Ruim</option>
+            </select>
+        </div>
+
+        <div class="botoes">
+            <button type="button" class="btn btn-voltar" onclick="history.back()">
+                ← Voltar
+            </button>
+
+            <button type="submit" class="btn btn-enviar">
+                ✓ Enviar Avaliação
+            </button>
+        </div>
+
+    </form>
+
+    <div class="rodape">
+        Obrigado por escolher a Sabor Gelado ❤️
+    </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrela Flutuante</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e1e;
+}
+
+.star-container {
+    animation: float 3s ease-in-out infinite;
+}
+
+.star {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #ffd54f, #ff9800);
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    position: relative;
+    filter: drop-shadow(0 10px 15px rgba(255,152,0,.4));
+}
+
+.eye {
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 50%;
+    position: absolute;
+    top: 55px;
+}
+
+.eye.left {
+    left: 50px;
+}
+
+.eye.right {
+    right: 50px;
+}
+
+.mouth {
+    width: 25px;
+    height: 12px;
+    border-bottom: 3px solid #222;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 75px;
+    left: 62px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="star-container">
+    <div class="star">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth"></div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drinks</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{background:#fff7f0}
+
+header{
+  background:linear-gradient(45deg,#ff3c00,#ff7a00);
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:30px;
+}
+
+.card{
+  width:250px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:.3s;
+}
+
+.card:hover{transform:scale(1.05)}
+
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card h3{padding:10px;color:#ff3c00}
+.card p{padding:0 10px}
+.card span{display:block;padding:10px;font-weight:bold}
+
+button{
+  margin:10px;
+  padding:10px;
+  background:#25d366;
+  color:white;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #ffe0cc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍔 Sabor Gelado 🍦</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="lanches.html">Lanches</a>
+    <a href="sobremesas.html">Sobremesas</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="Avaliaçao.html">Formulário</a>
+  </nav>
+</header>
+
+<section class="container">
+
+<!-- COCA -->
+<div class="card">
+  <img src="coca.jpg">
+  <h3>Coca-Cola</h3>
+  <p>Lata gelada</p>
+  <span>R$ 6</span>
+  <button>Adicionar</button>
+</div>
+
+<!-- SUCO -->
+<div class="card">
+  <img src="suco.jpg">
+  <h3>Suco Natural</h3>
+  <p>Laranja natural</p>
+  <span>R$ 8</span>
+  <button>Adicionar</button>
+</div>
+
+
+
+<!-- CAIPIRINHA -->
+<div class="card">
+  <img src="caipirinha.jpg">
+  <h3>Caipirinha</h3>
+  <p>Limão tradicional</p>
+  <span>R$ 12</span>
+  <button>Adicionar</button>
+</div>
+
+<!-- MOJITO -->
+<div class="card">
+  <img src="mojito.jpg">
+  <h3>Mojito</h3>
+  <p>Hortelã e limão</p>
+  <span>R$ 14</span>
+  <button>Adicionar</button>
+</div>
+
+<!-- ÁGUA -->
+<div class="card">
+  <img src="agua.jpg">
+  <h3>Água</h3>
+  <p>Com ou sem gás</p>
+  <span>R$ 4</span>
+  <button>Adicionar</button>
+</div>
+
+<!-- ENERGÉTICO -->
+<div class="card">
+  <img src="monster.jpg">
+  <h3>Energético</h3>
+  <p>Lata gelada</p>
+  <span>R$ 10</span>
+  <button>Adicionar</button>
+</div>
+ 
+
+<!-- Tubaina 600ml -->
+<div class="card">
+  <img src="funada.jpg">
+  <h3>Tubaina</h3>
+  <p>Refrescante</p>
+  <span>R$ 7</span>
+  <button>Adicionar</button>
+</div>
+
+<!-- Cerveja 600ml -->
+<div class="card">
+  <img src="stela.jpg">
+  <h3>Cervejas</h3>
+  <p>Stella,Heineken,Budweiser</p>
+  <span>R$ 10</span>
+  <button>Adicionar</button>
+</div>
+
+</section>
+<button class="btn-voltar" onclick="history.back()">
+    ← Voltar
+</button>
+<style></style>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+</head>
+<body>
+  
+
+
+
+    <!-- Botão para ir para outra página -->
+    <button onclick="window.location.href='Avaliaçao.html'">
+        Ir para Próxima Página →
+    </button>
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>
